@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+.inter {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+
+}
+
+*{
+    font-family: "Inter", sans-serif;
+
+}
+
+@theme {
+  /* Primary color palette */
+  --color-primary-50: #f0f9ff;
+  --color-primary-500: #3b82f6;
+  --color-primary-600: #2563eb;
+  --color-primary-700: #1d4ed8;
+
+  --font-family-sans: 'Inter', 'system-ui', 'sans-serif';
+  
+  /* Animation durations */
+  --duration-300: 150ms;
+  --duration-500: 250ms;
+}
+
+/* Base styles */
+body {
+  font-family: var(--font-family-sans);
+}
+
+/* Custom utility classes if needed */
+@utility text-balance {
+  text-wrap: balance;
+}
+
+/* Component styles */
+@layer components {
+  .btn-primary {
+    @apply bg-primary-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors duration-200;
+  }
+  
+  .card {
+    @apply bg-white rounded-xl shadow-lg border border-gray-100;
+  }
+}
